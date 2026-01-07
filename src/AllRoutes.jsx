@@ -1,20 +1,22 @@
 import React, { useState } from 'react'
 import { Route, Routes } from 'react-router-dom'
 import Home from '../src/pages/homepage/Home'
-import Preloader from './components/Preloader';
+
+import Header from './components/Header';
+import ContactUs from './pages/contactpage/ContactUs';
 
 const AllRoutes = () => {
-    const [loading, setLoading] = useState(true);
-
-  if (loading) {
-    return <Preloader onFinish={() => setLoading(false)} />;
-  }
+    
   return (
-    <Routes>
-        
-        <Route path='/' element={<Home/>}></Route>
-
-    </Routes>
+  <>
+      
+      <Header/>
+      <Routes>
+          
+          <Route path='/' element={<Home/>}></Route>
+          <Route path='/contact_us' element={<ContactUs/>}></Route>
+      </Routes>
+  </>
   )
 }
 
