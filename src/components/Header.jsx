@@ -37,7 +37,7 @@ const Header = () => {
             className="hidden md:flex items-center gap-6 text-lg font-medium"
             style={{ fontFamily: "Quintessential, serif" }}
           >
-            <a href="#" className="hover:opacity-80">About</a>
+            <a href="/about_the_stage" className="hover:opacity-80">About</a>
             <a href="/contact_us" className="hover:opacity-80">Contact</a>
             <a href="#" className="hover:opacity-80">Events</a>
           </nav>

@@ -13,7 +13,7 @@ import {
   faLinkedinIn,
 } from "@fortawesome/free-brands-svg-icons";
 
-import img from "../../assets/contact_img.jpeg";
+import img from "../../assets/contact_img.JPEG";
 
 
 const ContactUs = () => {
@@ -27,14 +27,14 @@ const ContactUs = () => {
         <div className="absolute inset-0 bg-black/10" />
   
         {/* Glass Card */}
-       <div className="relative z-10 w-full max-w-5xl mx-auto  bg-[#9C9D94]/60  p-10">
+       <div className="relative z-10 max-w-5xl mx-auto mt-18  bg-[#9C9D94]/60  w-197.75 h-103.75  p-10">
     
     <div className="grid grid-cols-1 md:grid-cols-[1fr_2fr] gap-12 items-start">
   
       {/* LEFT SIDE – TITLE */}
-      <div className="flex items-start md:items-center">
-        <h2 className="text-4xl md:text-8xl font-semibold text-black leading-tight">
-          Contact <br /> US
+      <div className="flex items-end md:items-end h-full">
+        <h2 className="text-4xl md:text-4xl w-full font-semibold text-black leading-tight">
+          Contact  Us
         </h2>
       </div>
   
