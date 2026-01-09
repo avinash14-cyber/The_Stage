@@ -1,32 +1,20 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faFacebookF, faTwitter, faInstagram } from "@fortawesome/free-brands-svg-icons";
+import {
+  faFacebookF,
+  faTwitter,
+  faInstagram,
+} from "@fortawesome/free-brands-svg-icons";
 import { HiBars3 } from "react-icons/hi2";
 import { useNavigate } from "react-router-dom";
 
 const Header = () => {
-  const [isSticky, setIsSticky] = useState(false);
-
-   const navigate=useNavigate()
-  useEffect(() => {
-    const handleScroll = () => {
-      // when scroll crosses 24px (top-6)
-      setIsSticky(window.scrollY > 0);
-    };
-
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
+  const navigate = useNavigate();
 
   return (
-    <header
-      className={`
-        w-full z-50 text-white transition-all duration-300
-        ${isSticky ? "fixed top-0" : "absolute top-6"}
-      `}
-    >
-      <div className="max-w-8xl mx-auto px-15 h-16 pb-2 flex items-center justify-between bg-[#9C9D94]/70 backdrop-blur-md">
-        
+    <header className="w-full z-50 bg-black text-white fixed ">
+      <div className="max-w-8xl mx-auto px-15 h-16 pb-2 flex items-center justify-between">
+
         {/* LEFT */}
         <div className="flex items-center gap-6">
           <button className="p-2 rounded">
@@ -37,20 +25,24 @@ const Header = () => {
             className="hidden md:flex items-center gap-6 text-lg font-medium"
             style={{ fontFamily: "Quintessential, serif" }}
           >
-            <a href="/about_the_stage" className="hover:opacity-80">About</a>
-            <a href="/contact_us" className="hover:opacity-80">Contact</a>
-            <a href="#" className="hover:opacity-80">Events</a>
+            <a href="/about_the_stage" className="hover:opacity-80">
+              About
+            </a>
+            <a href="/contact_us" className="hover:opacity-80">
+              Contact
+            </a>
+            <a href="#" className="hover:opacity-80">
+              Events
+            </a>
           </nav>
         </div>
 
         {/* CENTER */}
         <div
-          className="text-xl text-[#8C3917] md:text-5xl font-semibold"
-          onClick={()=>navigate('/')}
+          className="text-xl flex items-ce text-white md:text-4xl font-normal cursor-pointer"
+          onClick={() => navigate("/")}
           style={{
-            fontFamily: "'Playfair Display', serif",
-            fontStyle: "italic",
-            cursor:'pointer'
+            fontFamily: "XB Niloofar",fontStyle:'italic'
           }}
         >
           The Stage
